@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Projetos Desenvolvidos</h2>
+    <ul>
+        @for (project of projects(); track $index) {
+        <li>
+            <button>
+                <img [src]="project.src"
+                 [alt]="project.alt"
+                 [attr.width]="project.width"
+                 [attr.height]="project.height"
+                 loading="lazy">
+            </button>
+        </li>
+        }
+    </ul>
+</div>

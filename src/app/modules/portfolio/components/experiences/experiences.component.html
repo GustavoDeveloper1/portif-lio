@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Últimas Experiências</h2>
+    @for (experience of Experiences(); track $index) {
+    <details>
+        <summary>
+            <p>
+                <strong>{{experience.sumary.strong}}</strong>
+                {{experience.sumary.p}}
+            </p>
+        </summary>
+        <article [innerHTML]="experience.text"></article>
+    </details>
+    }
+</div>
