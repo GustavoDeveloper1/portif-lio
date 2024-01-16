@@ -1,0 +1,21 @@
+<header style="color: black;">
+    <h2 mat-dialog-title>{{getData()?.title}}</h2>
+    <button (click)="closeModal()">
+        <mat-icon>close</mat-icon>
+    </button>
+</header>
+
+<mat-dialog-content>
+    <h3>Descrição</h3>
+    <article style="color: black;" [innerHTML]="getData()?.description"></article>
+
+    <nav>
+        @for (link of getData()?.links; track $index) {
+
+        <a [href]="link.href" target="_blank" class="btn-primary">
+            {{link.name}}
+        </a>
+
+        }
+    </nav>
+</mat-dialog-content>

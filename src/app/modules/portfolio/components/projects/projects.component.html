@@ -3,12 +3,9 @@
     <ul>
         @for (project of projects(); track $index) {
         <li>
-            <button>
-                <img [src]="project.src"
-                 [alt]="project.alt"
-                 [attr.width]="project.width"
-                 [attr.height]="project.height"
-                 loading="lazy">
+            <button (click)="openDialog(project)">
+                <img [src]="project.src" [alt]="project.alt" [attr.width]="project.width" [attr.height]="project.height"
+                    loading="lazy">
             </button>
         </li>
         }
